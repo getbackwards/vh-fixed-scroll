@@ -1,4 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* vars */
+:root {
+  --border-color: #cdcdcd;
+  --button-color: #007acd;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -16,14 +23,16 @@ body {
 
 button {
   border: none;
-  background-color: #007acd;
+  background-color: var(--button-color);
+  padding: 0.25rem 0.5rem;
 }
 
 input {
   border: none;
-  border: 1px solid #cdcdcd;
+  border: 1px solid var(--border-color);
   border-right-width: 0;
   flex: 1 0 auto;
+  padding: 0.25rem 0.5rem;
 }
 
 svg {
@@ -31,8 +40,12 @@ svg {
 }
 
 .form-wrapper {
+  border-bottom: 1px solid var(--border-color);
   display: flex;
   flex: 1 0 auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  padding-bottom: 1rem;
 }
 
 .main-nav__global-options-search {
