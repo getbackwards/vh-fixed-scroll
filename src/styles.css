@@ -4,6 +4,11 @@
 :root {
   --border-color: #cdcdcd;
   --button-color: #007acd;
+  --link-color-alt: #65605D;
+  --link-color: #006EBD;
+  --unit: 1rem;
+  --unit-half: 0.5rem;
+  --unit-quater: 0.5rem;
 }
 
 * {
@@ -12,6 +17,11 @@
 
 html {
   height: 100%;
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
 }
 
 body {
@@ -24,7 +34,7 @@ body {
 button {
   border: none;
   background-color: var(--button-color);
-  padding: 0.25rem 0.5rem;
+  padding: var(--unit-quater) var(--unit-half);
 }
 
 input {
@@ -32,7 +42,17 @@ input {
   border: 1px solid var(--border-color);
   border-right-width: 0;
   flex: 1 0 auto;
-  padding: 0.25rem 0.5rem;
+  padding:  var(--unit-quater) var(--unit-half);
+}
+
+li a {
+  color: var(--link-color-alt);
+}
+
+ul {
+  list-style-type: none;
+  margin-top: 0;
+  padding-left: 0;
 }
 
 svg {
@@ -40,14 +60,27 @@ svg {
 }
 
 .form-wrapper {
+  background-color: #03a9f4;
   border-bottom: 1px solid var(--border-color);
   display: flex;
   flex: 1 0 auto;
-  padding-right: 1rem;
-  padding-left: 1rem;
-  padding-bottom: 1rem;
+  padding-top: var(--unit);
+  padding-right: var(--unit);
+  padding-left: var(--unit);
+  padding-bottom: var(--unit);
+  position: fixed;
+  width: 100%;
 }
 
 .main-nav__global-options-search {
+  /*height: 100%;*/
   padding-top: 40px;
+  position: absolute;
+  width: 100%;
+}
+
+.main-nav__search-suggestions {
+  background-color: skyblue;
+  margin-top: 77px; /* height of input */
+  padding: var(--unit);
 }
