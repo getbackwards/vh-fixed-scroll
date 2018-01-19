@@ -72,10 +72,16 @@ svg {
   width: 100%;
 }
 
+.h-scroll-lock {
+  position: fixed !important;
+  height: 100% !important;
+  width: 100% !important;
+}
+
 .main-nav__global-options-search {
   /*height: 100%;*/
   padding-top: 40px;
-  position: absolute;
+  /*position: absolute;*/
   width: 100%;
 }
 
@@ -83,6 +89,12 @@ svg {
   background-color: skyblue;
   margin-top: 77px; /* height of input */
   padding: var(--unit);
+
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  top: 40px;
+  overflow-y: auto;
 }
 
 /* code change */
